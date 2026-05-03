@@ -4,6 +4,42 @@
 
 一个给个人 AI agent 用的最小成长系统模板：规则、记忆、技能、反馈回流、自我评审。
 
+## 让你的 agent 帮你安装它
+
+这个仓库既是给人看的，也是给 AI agent 看的。
+
+如果你不想手动配置，可以直接把这个仓库交给你的 coding agent，让它根据你的项目帮你迁移和改造。人的任务不是记住每个文件怎么改，而是判断 agent 提出的修改方案是否合理。
+
+你可以把这段提示词复制给你的 coding agent：
+
+```text
+请读取这个仓库，并帮我把它适配到当前项目。
+
+先读 README.zh-CN.md，再读 AGENTS.md 和 CLAUDE.md。
+
+不要直接覆盖我已有的文件。
+先告诉我你准备复制、创建或合并哪些文件。
+
+然后帮我创建或更新：
+- AGENTS.md / CLAUDE.md
+- memory/
+- skills/
+- feedback/
+- 如有需要，加入 scripts/self_review.py
+
+修改后运行：
+python3 scripts/self_review.py self-test
+
+如果这台机器没有 python3，就用 python。
+
+最后总结：
+- 你改了哪些文件；
+- 你新增了哪些规则或记忆；
+- 哪些地方需要我确认后才能信任这套配置。
+```
+
+这才是本模板的推荐使用方式：它不只是给人读的说明文档，而是一个 AI agent 应该能读懂、解释并在你监督下迁移到项目里的模板。
+
 这个 starter kit 面向已经在用 Claude Code、Codex、OpenAI-compatible 模型 API 或其他 coding agent 的开发者。它不是一堆 prompt，而是一套能长期维护、持续修正的文件化工作流。
 
 核心结构：

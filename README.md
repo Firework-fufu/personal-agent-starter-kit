@@ -4,6 +4,42 @@
 
 A minimal growth system for personal AI agents: rules, memory, skills, feedback loops, and self-review workflows.
 
+## Let Your Agent Install It
+
+This repository is designed to be read by both humans and AI agents.
+
+If you do not want to configure it manually, give this repository to your coding agent and ask it to adapt the template to your project. The human job is not to memorize every file. The human job is to decide whether the agent's proposed changes make sense.
+
+Copy this prompt into your coding agent:
+
+```text
+Please read this repository and help me adapt it to my project.
+
+Start from README.md, then read AGENTS.md and CLAUDE.md.
+
+Do not blindly overwrite existing files.
+First explain what files you plan to copy, create, or merge.
+
+Then help me create or update:
+- AGENTS.md / CLAUDE.md
+- memory/
+- skills/
+- feedback/
+- scripts/self_review.py if useful
+
+After editing, run:
+python3 scripts/self_review.py self-test
+
+If python3 is not available on this machine, use python.
+
+Finally, summarize:
+- what files you changed;
+- what rules or memory you added;
+- what I should review before trusting the setup.
+```
+
+That is the intended usage pattern: this is not only documentation for humans. It is a migration template that an AI agent should be able to read, explain, and adapt under your supervision.
+
 This starter kit is for developers who already use tools like Claude Code, Codex, OpenAI-compatible model APIs, or other coding agents, but want something more durable than a pile of prompts.
 
 The core idea:
