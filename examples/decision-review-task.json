@@ -1,0 +1,6 @@
+{
+  "context": "We are deciding whether to publish a minimal personal agent starter kit for developers who use AI coding agents.",
+  "constraints": "The first version must stay small, avoid private memory, and prove the loop: rules, memory, skills, feedback, and self-review.",
+  "plan": "Publish a local v0.1 starter kit with README, AGENTS.md, CLAUDE.md, memory templates, two skills, a feedback log, an update checklist, and a self_review.py script with an offline self-test. Do not build a web UI, installer, vector database, or full multi-agent framework in v0.1."
+}
+
